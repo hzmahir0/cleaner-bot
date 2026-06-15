@@ -122,8 +122,10 @@ if __name__ == '__main__':
     message_handler = MessageHandler(filters.TEXT & (~filters.COMMAND), handle_message)
     application.add_handler(message_handler)
     print("Bot is running...")
-    application.run_polling()        await update.message.reply_text("Bana Pinterest linki gönderirsen temizlerim.")
-
+    File "/opt/render/project/src/main.py", line 125
+    application.run_polling()        await update.message.reply_text(...)
+                                     ^^^^^
+SyntaxError: invalid syntax
 if __name__ == '__main__':    
     threading.Thread(target=run_web_server, daemon=True).start()
     application = ApplicationBuilder().token(TOKEN).build()
