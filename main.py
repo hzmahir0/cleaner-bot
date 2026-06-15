@@ -9,7 +9,7 @@ from telegram.ext import ApplicationBuilder, ContextTypes, MessageHandler, filte
 from moviepy.editor import VideoFileClip
 
 logging.basicConfig(level=logging.INFO)
-TOKEN = os.environ.get("BOT_TOKEN")
+TOKEN = os.environ.get("8700248975:AAF-FJeHnr6PgtlcJ-kK4k3raxstSGmyoRc")
 
 class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
     def do_GET(self):
