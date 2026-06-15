@@ -73,7 +73,8 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     else:
         await update.message.reply_text("Bana Pinterest linki gönderirsen temizlerim.")
 
-if name == 'main':
+if _name_ == 'main':
+    _main_()
     threading.Thread(target=run_web_server, daemon=True).start()
     application = ApplicationBuilder().token(TOKEN).build()
     message_handler = MessageHandler(filters.TEXT & (~filters.COMMAND), handle_message)
