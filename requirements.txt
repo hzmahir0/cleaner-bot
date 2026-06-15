@@ -1,0 +1,5 @@
+python-telegram-bot
+requests
+moviepy
+opencv-python-headless
+numpy
