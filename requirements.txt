@@ -1,5 +1,5 @@
 python-telegram-bot
 requests
-moviepy
+moviepy==1.0.3
 opencv-python-headless
 numpy
