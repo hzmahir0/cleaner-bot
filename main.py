@@ -6,7 +6,7 @@ import threading
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from telegram import Update
 from telegram.ext import ApplicationBuilder, ContextTypes, MessageHandler, filters
-from moviepy.editor import VideoFileClip
+from moviepy import VideoFileClip
 
 logging.basicConfig(level=logging.INFO)
 
