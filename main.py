@@ -95,7 +95,6 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         try:
             process_video("temp_input.mp4", "temp_output.mp4")
 
-            # 50MB Telegram limiti kontrolü
             video_size = os.path.getsize("temp_output.mp4")
             if video_size > 50 * 1024 * 1024:
                 await update.message.reply_text("Video 50MB'ı geçiyor, Telegram'a gönderemedim maalesef.")
@@ -117,15 +116,6 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("Bana Pinterest linki gönderirsen temizlerim.")
 
 if __name__ == '__main__':
-    threading.Thread(target=run_web_server, daemon=True).start()
-    application = ApplicationBuilder().token(TOKEN).build()
-    message_handler = MessageHandler(filters.TEXT & (~filters.COMMAND), handle_message)
-    application.add_handler(message_handler)
-    print("Bot is running...")
-    application.run_polling()        await update.message.reply_text(...)
-                                     ^^^^^
-SyntaxError: invalid syntax
-if __name__ == '__main__':    
     threading.Thread(target=run_web_server, daemon=True).start()
     application = ApplicationBuilder().token(TOKEN).build()
     message_handler = MessageHandler(filters.TEXT & (~filters.COMMAND), handle_message)
